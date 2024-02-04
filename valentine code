@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .noButton {
+        position: absolute;
+        top: -100px;
+        left: -100px;
+    }
+</style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <button onclick="happyValentine()">Yes</button>
+    <button onclick="moveNo()" id="noButton" class="noButton">No</button>
+
+    <script>
+        function happyValentine() {
+            alert("Happy Valentine's Honey Bunny!");
+        }
+
+        function moveNo() {
+            var noButton = document.getElementById('noButton');
+            noButton.style.top = (Math.random() * window.innerHeight) + 'px';
+            noButton.style.left = (Math.random() * window.innerWidth) + 'px';
+        }
+    </script>
+</body>
+</html>
